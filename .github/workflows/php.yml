@@ -37,3 +37,13 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
+
+    - name: Zip up the build
+      run: |
+        zip -r plg_oauthlink.zip . -x@.zipignore
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: plg_oauthlink
+        path: plg_oauthlink.zip
