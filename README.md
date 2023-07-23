@@ -32,6 +32,11 @@ TBC
 
 TBC
 
+## Credits
+OAuthLink is essentially a Joomla wrapper around the fantastic [oauth2-azure](https://github.com/TheNetworg/oauth2-azure) library, big kudos to it's contributors for making this plugin a breeze to write.
+
+Additional credit to the [joomla-onelogin](https://github.com/onelogin/joomla-saml) plugin, from which this takes inspiration.
+
 ## Contributing
 
 We welcome contributions and bug reports! Please see our [Contribution Guidelines](CONTRIBUTING.md) for details on how to contribute to OAuthLink.
