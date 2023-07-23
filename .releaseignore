@@ -4,3 +4,5 @@
 composer.json
 composer.lock
 README.md
+.git/
+.github/
