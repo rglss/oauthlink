@@ -4,11 +4,11 @@
     <author>rglss</author>
     <authorEmail>oauthlink@rglss.net</authorEmail>
     <authorUrl>github.com/rglss</authorUrl>
-    <creationDate>May 2023</creationDate>
+    <creationDate>July 2023</creationDate>
     <copyright>Copyright (C) 2023 rglss. All rights reserved.</copyright>
     <license>MIT</license>
     <version>1.0.0</version>
-    <description>TBD</description>
+    <description>PLG_SYSTEM_OAUTHLINK_XML_DESCRIPTION</description>
     <files>
         <filename plugin="oauthlink">oauthlink.php</filename>
         <filename>index.html</filename>
@@ -17,7 +17,8 @@
         <folder>subforms</folder>
     </files>
     <languages>
-        <language tag="en-GB">language/en-GB/en-GB.plg_user_oauthlink.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_oauthlink.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_oauthlink.sys.ini</language>
     </languages>
 
     <config>
