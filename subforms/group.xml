@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field 
+        name="azure_group_id" 
+        type="text" 
+        label="Azure Group ID"
+        description="Object ID of the Azure user group"
+    />
+    <field
+        name="joomla_user_group"
+        type="UserGroupList"
+        label="Joomla User Group"
+        description="Select the default user group for new users"
+        layout="joomla.form.field.list-fancy-select"
+        checksuperusergroup="1"
+        default=""
+        multiple="0"
+        >
+    </field>
+</form>

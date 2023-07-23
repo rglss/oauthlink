@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.7" type="plugin" group="system">
+    <name>plg_system_oauthlink</name>
+    <author>rglss</author>
+    <authorEmail></authorEmail>
+    <authorUrl>github.com/rglss</authorUrl>
+    <creationDate>May 2023</creationDate>
+    <copyright>Copyright (C) 2014-2019 Onelogin Inc. All rights reserved.</copyright>
+    <license>MIT</license>
+    <version>0.0.1</version>
+    <description>TBD</description>
+    <files>
+        <filename plugin="oauthlink">oauthlink.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>vendor</folder>
+        <folder>subforms</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_user_oauthlink.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic" label="Basic Settings">
+
+                <field name="oauthlink_autocreate_user" type="radio"
+                    label="Create User"
+                    description="Create a user if they don't exist?"
+                    default="0"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+
+                <field
+                    name="default_user_group"
+                    type="UserGroupList"
+                    label="Default User Group"
+                    description="Select the default user group for new users"
+                    layout="joomla.form.field.list-fancy-select"
+                    checksuperusergroup="1"
+                    default="2"
+                    multiple="0"
+                    >
+                </field>
+               
+                <field name="oauthlink_match_account" type="radio"
+                    label="Match user account on"
+                    description="Which field should be used to match a user account?"
+                    default="username"
+                >
+                    <option value="username">Username</option>
+                    <option value="email">E-Mail</option>
+                </field>
+
+                 <field name="oauthlink_updateuser" type="radio"
+                    label="Sync User Data"
+                    description="Sync user using Microsoft Graph? (required to use Attribute Mapping)"
+                    default="1"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+
+                <field name="oauthlink_updategroups" type="radio"
+                    label="Sync Group Data"
+                    description="Sync user groups using Microsoft Graph? (required to use Attribute Mapping)"
+                    default="1"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+
+                 <field name="oauthlink_removegroups" type="radio"
+                    label="Remove users fropm groups"
+                    description="Remove users from groups when no longer in mapped Azure group?"
+                    default="0"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="provider" label="Azure Settings">
+                <field name="note1" type="note" label="Application Settings" />
+                <field
+                    name="client_id"
+                    type="text"
+                    label="Client ID"
+                    description="Enter the Client ID"
+                />
+                <field
+                    name="client_secret"
+                    type="password"
+                    label="Client Secret"
+                    description="Enter the Client Secret"
+                />
+
+                <field name="note2" type="note" label="Additional Settings" />
+                <field
+                    name="tenant_id"
+                    type="text"
+                    label="Tenant ID"
+                    description="Enter the Directory ID, or leave blank if using multi-tenant auth"
+                />
+            </fieldset>
+
+            <fieldset name="groups" label="Group Mapping">
+                <field name="note1" type="note" description="Add group mappings below" />
+                <field name="group-mapping" type="subform"
+                formsource="plugins/system/oauthlink/subforms/group.xml" multiple="true"
+                label="Group Mapping" description="Subform Field Description" />
+            </fieldset>
+
+            <fieldset name="attributes" label="User Attribute Mapping">
+                <field name="note1" type="note" description="Configure any user field mappings below (displayName is mapped to Name by default). Note: OAuthLink can only update custom attributes when the correct permissions have been set (See docs)." />
+                <field name="attribute-mapping" type="subform"
+                formsource="plugins/system/oauthlink/subforms/attribute.xml" multiple="true"
+                label="Attribute Mapping" description="Subform Field Description" />
+            </fieldset>
+
+        </fields>
+    </config>
+
+</extension>

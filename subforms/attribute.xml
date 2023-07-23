@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field 
+        name="azure_user_attribute" 
+        type="text" 
+        label="Azure User Property"
+        description="Name of the Azure user property"
+    />
+    <field
+        name="joomla_user_field"
+        type="sql"
+        default="10"
+        label="User Field"
+        key_field="id"
+        value_field="label"
+        sql_select="id, label"
+        sql_from="#__fields"
+        sql_filter="context"
+        sql_default_context="com_users.user"
+    />
+</form>
