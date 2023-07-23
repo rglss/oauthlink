@@ -1,4 +1,14 @@
 {
+    "name": "rglss/oauthlink",
+    "description": "Joomla OAuth2 Authentication Plugin integrated with Azure AD & MS Graph",
+    "type": "joomla-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rglss",
+            "email": "oauthlink@rglss.net"
+        }
+    ],
     "require": {
         "thenetworg/oauth2-azure": "^2.1"
     }
