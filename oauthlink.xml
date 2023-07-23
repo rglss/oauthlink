@@ -125,4 +125,8 @@
         </fields>
     </config>
 
+    <updateservers>
+        <server type="extension" name="OAuthLink Releases">https://raw.githubusercontent.com/rglss/oauthlink/master/update_endpoint.xml</server>
+     </updateservers>
+
 </extension>
