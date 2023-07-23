@@ -1,10 +1,9 @@
-name: PHP Composer
+name: Build and Release
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    tags:
+      - 'v*' 
 
 permissions:
   contents: read
@@ -40,10 +39,26 @@ jobs:
 
     - name: Zip up the build
       run: |
-        zip -r plg_oauthlink.zip . -x@.releaseignore
+        zip -r plg_system_oauthlink.zip . -x@.releaseignore
+        
+    - name: Create GitHub Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      id: upload_release_asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: plg_oauthlink
-        path: plg_oauthlink.zip
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./plg_system_oauthlink.zip
+        asset_name: plg_system_oauthlink.zip
+        asset_content_type: application/zip
