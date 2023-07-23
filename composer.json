@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "thenetworg/oauth2-azure": "^2.1"
+        "thenetworg/oauth2-azure": "v2.1.1",
+        "firebase/php-jwt": "v6.5.0"
     }
 }
