@@ -6,3 +6,4 @@ composer.lock
 README.md
 .git/
 .github/
+update_endpoint.xml
