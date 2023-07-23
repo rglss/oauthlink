@@ -58,15 +58,6 @@ class plgSystemOAuthLink extends JPlugin
         $provider->scope = ['openid', 'profile', 'email', 'offline_access', $baseGraphUri . '/User.Read'];
 
         /**
-         * DEBUG PARAM - REMOVE THIS
-         */
-        if (isset($_GET['oauthlink']) and $_GET['oauthlink'] == 'debug') {
-            // $this->syncUserAttributes(null);
-            print_r($this->params);
-            exit();
-        }
-
-        /**
          *  Auth Flow - Query Param ?oauthlink=login
          */
         if (isset($_GET['oauthlink']) and $_GET['oauthlink'] == 'login') {
