@@ -1,0 +1,6 @@
+.releaseignore
+.gitignore
+.phpunit.result.cache
+composer.json
+composer.lock
+README.md
