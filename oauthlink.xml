@@ -2,12 +2,12 @@
 <extension version="3.7" type="plugin" group="system">
     <name>plg_system_oauthlink</name>
     <author>rglss</author>
-    <authorEmail></authorEmail>
+    <authorEmail>oauthlink@rglss.net</authorEmail>
     <authorUrl>github.com/rglss</authorUrl>
     <creationDate>May 2023</creationDate>
-    <copyright>Copyright (C) 2014-2019 Onelogin Inc. All rights reserved.</copyright>
+    <copyright>Copyright (C) 2023 rglss. All rights reserved.</copyright>
     <license>MIT</license>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <description>TBD</description>
     <files>
         <filename plugin="oauthlink">oauthlink.php</filename>
