@@ -43,7 +43,7 @@ We welcome contributions and bug reports! Please see our [Contribution Guideline
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [GPLv3](LICENSE).
 
 ## Support
 
