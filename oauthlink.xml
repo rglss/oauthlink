@@ -6,7 +6,7 @@
     <authorUrl>github.com/rglss</authorUrl>
     <creationDate>July 2023</creationDate>
     <copyright>Copyright (C) 2023 rglss. All rights reserved.</copyright>
-    <license>MIT</license>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <version>1.0.0</version>
     <description>PLG_SYSTEM_OAUTHLINK_XML_DESCRIPTION</description>
     <files>
